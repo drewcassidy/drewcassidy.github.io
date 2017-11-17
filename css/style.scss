@@ -1,5 +1,50 @@
 ---
 ---
+$blue: #26A6A6;
+
+header {
+    left: 0;
+}
+#sidebar {
+    width: 25%;
+    left: 0;
+}
+.flagText {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    z-index: 2;
+
+}
+
+.flag {
+    position: relative;
+    margin-top: 10px;
+    height: 50px;
+    width: 175px;
+    fill-opacity: 0;
+    left: -10px;
+
+    svg {
+        position: relative;
+        float:right;
+        right:-25px;
+    }
+}
+
+.flag:hover {
+    fill-opacity: 100 !important;
+}
+
+.blue {
+    fill: $blue;
+    background-color: $blue;
+}
 
 footer {
     font-size: 1em;
