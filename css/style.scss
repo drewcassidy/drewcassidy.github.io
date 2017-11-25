@@ -168,7 +168,9 @@ ul#sidebar {
 
         border-radius: 0 5px 5px 0;
 
-        h3 {
+
+
+        .flagText {
             margin-block-start: 0;
             margin-block-end: 0;
             z-index: 2;
@@ -196,33 +198,15 @@ ul#sidebar {
         width: 170px;
         border-radius: 0;
     }
-        /*
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: 0px;
-            top: 25px;
-            width: 0; 
-            height: 0; 
-            border-top: 25px solid transparent; 
-            border-bottom: 25px solid transparent; 
-        
-    }
 
-    .blue::after {
-        border-left: 20px solid $blue; 
+    .flagPoint{
+        display: block;
+        position: relative;
+        left:170px;
+        width: 20px;
+        height: 50px;
+        mask-image: url('../svg/flag.svg');
     }
-
-    .orange::after {
-        border-left: 20px solid $orange; 
-    }
-
-    .green::after {
-        border-left: 20px solid $green; 
-    }
-
-    .magenta::after {
-        border-left: 20px solid $magenta; */
 }
 
 
