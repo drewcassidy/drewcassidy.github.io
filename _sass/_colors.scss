@@ -8,6 +8,12 @@ $orange: rgb(236, 103, 55);
 $green: rgb(188, 212, 42);
 $magenta: rgb(168, 66, 114);
 
+$darken-factor: 15%;
+$dark-blue: darken($blue, $darken-factor);
+$dark-orange: darken($orange, $darken-factor);
+$dark-green: darken($green, $darken-factor);
+$dark-magenta: darken($magenta, $darken-factor);
+
 .blue {
     fill: $blue;
     background-color: $blue;
@@ -26,4 +32,24 @@ $magenta: rgb(168, 66, 114);
 .magenta {
     fill: $magenta;
     background-color: $magenta;
+}
+
+.dark-blue {
+    fill: $dark-blue;
+    background-color: $dark-blue;
+}
+
+.dark-orange {
+    fill: $dark-orange;
+    background-color: $dark-orange;
+}
+
+.dark-green {
+    fill: $dark-green;
+    background-color: $dark-green;
+}
+
+.dark-magenta {
+    fill: $dark-magenta;
+    background-color: $dark-magenta;
 }
