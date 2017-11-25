@@ -1,0 +1,155 @@
+@import 'colors';
+@import 'fonts';
+
+$flag-shadow: rgba(black, 0.2);
+
+ul#sidebar {
+    flex-shrink: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+    width: 180px;
+    line-height: 0;
+
+
+    margin: 0;
+    padding: {
+        top: 5px;
+        bottom: 5px;
+        left: 0px;
+    }
+}
+
+.flag {
+    display: inline-block;
+    position: relative;
+    left: -3px;
+
+    text-align: center;
+    z-index: 1;
+
+    padding: {
+        top: 5px;
+        bottom: 5px;
+        left: 0px;
+    }
+    width: 90%;
+    
+    .flagFold{
+        display: block;
+        position: absolute;
+        z-index: -100;
+        left:0px;
+        top:55px;
+        width: 3px;
+        height: 3px;
+        mask-image: url('../svg/fold.svg');
+    }
+
+    .flagButton {
+        display: block;
+        float: left;
+        left: 0;
+        height: 50px;
+        width: 160px;
+
+        border-radius: 0 5px 5px 0;
+
+        .flagText {
+            font: {
+                family: $sidebar-font;
+                size: 20px;
+                weight: 600;
+            }
+            position: absolute;
+
+            line-height: normal;
+            text-align: center;
+
+            width: 160px;
+            right:0;
+            top:0;
+            padding-top: 10px;
+
+            color: $sidebar-text;
+        }
+    }
+
+    .flagButton::before {
+        z-index: -1;
+        content: " ";
+        display: block;
+        position: relative;
+        left: 3px;
+        top: 4px;
+
+        height: 50px;
+        width: 160px;
+        background-color: $flag-shadow;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+.flag:hover {
+
+    .flagButton {
+        width: 170px;
+        border-radius: 0;
+    }
+
+    .flagButton::before{
+        width: 170px;
+        border-radius: 0;
+    }
+
+    .flagPoint{
+        position: absolute;
+        width: 0; 
+        height: 0;
+        border-top: 25px solid transparent; 
+        border-bottom: 25px solid transparent;
+        border-left-width: 20px; 
+        border-left-style: solid;
+        background-color: transparent;
+        // display: block;
+        // position: absolute;
+        // left:170px;
+        // width: 20px;
+        // height: 50px;
+        // -webkit-mask-image: url('../svg/flag.svg');
+        // mask-image: url('../svg/flag.svg');
+        // //@include prefix(filter, $flag-shadow, o ms moz webkit);
+    }
+
+    .flagPoint.blue {
+        border-left-color: $blue;
+    }
+    
+    .flagPoint.orange {
+        border-left-color: $orange;
+    }
+    
+    .flagPoint.green {
+        border-left-color: $green;
+    }
+    
+    .flagPoint.magenta {
+        border-left-color: $magenta;
+    }
+
+    .flagPoint::after{
+        position: absolute;
+        width: 0; 
+        height: 0;
+        border-top: 25px solid transparent; 
+        border-bottom: 25px solid transparent;
+        border-left: 20px solid $flag-shadow; 
+         z-index: -1;
+         content: " ";
+         left: -20 + 3px;
+         top: -25 + 4px;
+
+     }
+}
+
+ 

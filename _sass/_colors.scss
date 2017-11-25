@@ -1,0 +1,29 @@
+$background: #2B2A27;
+$foreground: #EDE0CE;
+$margin: darken($background, 8%);
+$shadow: rgba(black, 0.4);
+
+$blue: rgb(39, 167, 167);
+$orange: rgb(236, 103, 55);
+$green: rgb(188, 212, 42);
+$magenta: rgb(168, 66, 114);
+
+.blue {
+    fill: $blue;
+    background-color: $blue;
+}
+
+.orange {
+    fill: $orange;
+    background-color: $orange;
+}
+
+.green {
+    fill: $green;
+    background-color: $green;
+}
+
+.magenta {
+    fill: $magenta;
+    background-color: $magenta;
+}

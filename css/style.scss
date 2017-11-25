@@ -1,23 +1,23 @@
 ---
 ---
-$background: #2B2A27;
-$foreground: #EDE0CE;
-$margin: darken($background, 8%);
-$shadow: rgba(black, 0.3);
+@import 'colors';
+@import 'sidebar';
+@import 'fonts';
 
-$blue: rgb(39, 167, 167);
-$orange: rgb(236, 103, 55);
-$green: rgb(188, 212, 42);
-$magenta: rgb(168, 66, 114);
 
-$sidebar-text: $background;
-$sidebar-font: 'Barlow', sans-serif;
-
-$title-text: $foreground;
-$title-font: 'Barlow', sans-serif;
-
-$body-text: $foreground;
-$body-font: 'Open Sans', sans-serif;
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+   
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
 
 
 ::selection {
@@ -31,25 +31,6 @@ $body-font: 'Open Sans', sans-serif;
 }
 
 
-.blue {
-    fill: $blue;
-    background-color: $blue;
-}
-
-.orange {
-    fill: $orange;
-    background-color: $orange;
-}
-
-.green {
-    fill: $green;
-    background-color: $green;
-}
-
-.magenta {
-    fill: $magenta;
-    background-color: $magenta;
-}
 
 body {
     margin: 0;
@@ -59,6 +40,7 @@ body {
 #box {
     background-color: $background;
     max-width: 800px;
+    z-index: 0;
     
     margin-left: auto;
     margin-right: auto;
@@ -121,93 +103,6 @@ body {
 }
 
 
-
-ul#sidebar {
-    flex-shrink: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    width: 180px;
-    margin: 0;
-    line-height: 0;
-
-    padding: {
-        top: 5px;
-        bottom: 5px;
-        left: 0px;
-    }
-    background-color: $background;
-    
-}
-
-.flag {
-    display: inline-block;
-    text-align: center;
-    line-height: normal;
-
-    position: relative;
-    padding: {
-        top: 5px;
-        bottom: 5px;
-        left: 0px;
-    }
-    //height: 60px;
-    width: 90%;
-    left: -3px;
-    
-    fill-opacity: 0;
-
-
-    .flagButton {
-        //position: absolute;
-        display: block;
-        float: left;
-
-        left: 0;
-        height: 50px;
-        width: 160px;
-
-        border-radius: 0 5px 5px 0;
-
-
-
-        .flagText {
-            margin-block-start: 0;
-            margin-block-end: 0;
-            z-index: 2;
-            float: right;
-            width: 160px;
-            text-align: center;
-            vertical-align: middle;
-            font-family: $sidebar-font;
-            color: $sidebar-text;
-            font-size: 20px;
-            text-align: center;
-            font-weight: 600;
-
-            height: 60%;
-            top: 50%;
-            bottom: 50%;
-            padding-top: 10px;
-        }
-    }
-}
-
-.flag:hover {
-
-    .flagButton {
-        width: 170px;
-        border-radius: 0;
-    }
-
-    .flagPoint{
-        display: block;
-        position: relative;
-        left:170px;
-        width: 20px;
-        height: 50px;
-        mask-image: url('../svg/flag.svg');
-    }
-}
 
 
 
