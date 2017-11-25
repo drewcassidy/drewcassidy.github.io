@@ -68,14 +68,13 @@ ul#sidebar {
 
             width: 160px;
             right:0;
-            top:0;
-            padding-top: 10px;
+            top:15px;
 
             color: $sidebar-text;
         }
     }
 
-    .flagButton::before {
+    .flagButton::after{
         z-index: -1;
         content: " ";
         display: block;
@@ -97,7 +96,7 @@ ul#sidebar {
         border-radius: 0;
     }
 
-    .flagButton::before{
+    .flagButton::after{
         width: 170px;
         border-radius: 0;
     }
