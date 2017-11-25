@@ -142,7 +142,7 @@ ul#sidebar {
 .flag {
     display: inline-block;
     text-align: center;
-    line-height: 1em;
+    line-height: normal;
 
     position: relative;
     padding: {
@@ -175,6 +175,7 @@ ul#sidebar {
             float: right;
             width: 160px;
             text-align: center;
+            vertical-align: middle;
             font-family: $sidebar-font;
             color: $sidebar-text;
             font-size: 20px;
