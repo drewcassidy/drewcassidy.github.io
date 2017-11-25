@@ -54,9 +54,7 @@ $body-font: 'Open Sans', sans-serif;
 body {
     margin: 0;
     background-color: $margin;
-    color-profile: sRGB;
 }
-
 
 #box {
     background-color: $background;
@@ -124,10 +122,13 @@ body {
 
 
 
-#sidebar {
+ul#sidebar {
     flex-shrink: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
     width: 180px;
     margin: 0;
+    line-height: 0;
 
     padding: {
         top: 5px;
@@ -135,11 +136,13 @@ body {
         left: 0px;
     }
     background-color: $background;
+    
 }
 
 .flag {
     display: inline-block;
     text-align: center;
+    line-height: 1em;
 
     position: relative;
     padding: {
@@ -165,7 +168,9 @@ body {
 
         border-radius: 0 5px 5px 0;
 
-        .flagText {
+        h3 {
+            margin-block-start: 0;
+            margin-block-end: 0;
             z-index: 2;
             float: right;
             width: 160px;
