@@ -74,149 +74,144 @@ $animate-time: 0.03s;
         size: 20px;
         weight: 600;
     }
-    position: absolute;
+    position: relative;
 
     line-height: normal;
     text-align: center;
 
+    float: right;
     width: 160px;
-    right:0;
-    top:15px;
+    top:12px;
 
     color: $sidebar-text;
 }
 
-@media screen and (min-width: $mobile-width){
-    #navFlags {
-        .flag {
-            display: inline-block;
-            position: relative;
-            left: -3px;
+@media screen and (min-width: $mobile-width) {
+    .flag {
+        display: inline-block;
+        position: relative;
+        left: -3px;
 
-            text-align: center;
-            z-index: 1;
+        text-align: center;
+        z-index: 1;
 
-            padding: {
-                top: 5px;
-                bottom: 5px;
-                left: 0px;
-            }
-            
-            .flagButton {
-                display: block;
-                float: left;
+        padding: {
+            top: 5px;
+            bottom: 5px;
+            left: 0px;
+        }
+        
+        .flagButton {
+            display: block;
+            float: left;
 
-                height: 50px;
-                width: 160px;
+            height: 50px;
 
-                border-radius: 0 5px 5px 0;
+            border-radius: 0 5px 5px 0;
 
-                @include prefix(transition-property, width, webkit moz o);
-                @include prefix(transition-property, border-radius, webkit moz o);
-            }
-
-            .flagButton::after{
-                z-index: -1;
-                content: " ";
-                display: block;
-                position: relative;
-                left: 3px;
-                top: 4px;
-
-                height: 50px;
-                width: 160px;
-                background-color: $flag-shadow;
-                border-radius: 0 5px 5px 0;
-
-                @include prefix(transition-property, width, webkit moz o);
-                @include prefix(transition-property, border-radius, webkit moz o);
-            }
-
-            .flagPoint{
-                position: absolute;
-                width: 0; 
-                height: 0;
-                left: 160px;
-                border-top: 25px solid transparent; 
-                border-bottom: 25px solid transparent;
-                border-left-width: 0px; 
-                border-left-style: solid;
-                background-color: transparent;
-
-                @include prefix(transition-property, left, webkit moz o);
-                @include prefix(transition-property, border-left-width, webkit moz o);
-            }
-
-            .flagPoint.blue {
-                border-left-color: $blue;
-            }
-            
-            .flagPoint.orange {
-                border-left-color: $orange;
-            }
-            
-            .flagPoint.green {
-                border-left-color: $green;
-            }
-            
-            .flagPoint.magenta {
-                border-left-color: $magenta;
-            }
-
-            .flagPoint::after{
-                position: absolute;
-                width: 0; 
-                height: 0;
-                border-top: 25px solid transparent; 
-                border-bottom: 25px solid transparent;
-                border-left: 0px solid $flag-shadow; 
-                z-index: -1;
-                content: " ";
-                left: -20 + 3px;
-                top: -25 + 4px;
-
-                @include prefix(transition-property, border-left-width, webkit moz o);
-            }
-
-            .flagFold{
-                display: block;
-                position: absolute;
-                z-index: -100;
-                left:0px;
-                top:55px;
-                width: 3px;
-                height: 3px;
-                mask-image: url('../svg/fold.svg');
-                -webkit-mask-image: url('../svg/fold.svg');
-            }
-
+            @include prefix(transition-property, width, webkit moz o);
+            @include prefix(transition-property, border-radius, webkit moz o);
         }
 
-        .flag:hover {
+        .flagButton::after{
+            z-index: -1;
+            content: " ";
+            display: block;
+            position: relative;
+            left: 3px;
+            top: 4px;
 
-            .flagButton {
-                width: 170px;
-                border-radius: 0;
-            }
+            height: 50px;
+            width: 160px;
+            background-color: $flag-shadow;
+            border-radius: 0 5px 5px 0;
 
-            .flagButton::after{
-                width: 170px;
-                border-radius: 0;
-            }
+            @include prefix(transition-property, width, webkit moz o);
+            @include prefix(transition-property, border-radius, webkit moz o);
+        }
 
-            .flagPoint {
-                left: 170px;
-                border-left-width: 20px;
-            }
-            .flagPoint::after{
-                border-left-width: 20px;
-            }
+        .flagPoint{
+            position: absolute;
+            width: 0; 
+            height: 0;
+            left: 160px;
+            border-top: 25px solid transparent; 
+            border-bottom: 25px solid transparent;
+            border-left-width: 0px; 
+            border-left-style: solid;
+            background-color: transparent;
+
+            @include prefix(transition-property, left, webkit moz o);
+            @include prefix(transition-property, border-left-width, webkit moz o);
+        }
+
+        .flagPoint.blue {
+            border-left-color: $blue;
+        }
+        
+        .flagPoint.orange {
+            border-left-color: $orange;
+        }
+        
+        .flagPoint.green {
+            border-left-color: $green;
+        }
+        
+        .flagPoint.magenta {
+            border-left-color: $magenta;
+        }
+
+        .flagPoint::after{
+            position: absolute;
+            width: 0; 
+            height: 0;
+            border-top: 25px solid transparent; 
+            border-bottom: 25px solid transparent;
+            border-left: 0px solid $flag-shadow; 
+            z-index: -1;
+            content: " ";
+            left: -20 + 3px;
+            top: -25 + 4px;
+
+            @include prefix(transition-property, border-left-width, webkit moz o);
+        }
+
+        .flagFold{
+            display: block;
+            position: absolute;
+            z-index: -100;
+            left:0px;
+            top:55px;
+            width: 3px;
+            height: 3px;
+            mask-image: url('../svg/fold.svg');
+            -webkit-mask-image: url('../svg/fold.svg');
+        }
+    }
+
+    .flag:hover {
+
+        .flagButton {
+            width: 170px;
+            border-radius: 0;
+        }
+
+        .flagButton::after{
+            width: 170px;
+            border-radius: 0;
+        }
+
+        .flagPoint {
+            left: 170px;
+            border-left-width: 20px;
+        }
+        .flagPoint::after{
+            border-left-width: 20px;
         }
     }
 }
  
-
-@media screen and (max-width: $mobile-width){
+@media screen and (max-width: $mobile-width) {
     #sidebar{
         display: flex;
         justify-content: space-between;
@@ -236,32 +231,6 @@ $animate-time: 0.03s;
         li {
             flex-grow: 1;
             flex-shrink: 0;
-           width: 120px;
-        }
-        .flag {
-            text-decoration: none;
-
-            display: block;
-            flex-shrink: 0;
-            flex-grow: 1;
-
-
-            margin: 5px;
-            .flagPoint, .flagFold {
-                display: none;
-            }
-
-            .flagButton{
-                border-radius: 5px;
-                display: block;
-                height: 50px;
-
-                .flagText {
-                    display: block;
-                    position: relative;
-                    width: 100%;
-                }
-            }
         }
     }
 
@@ -269,5 +238,33 @@ $animate-time: 0.03s;
         display: none;
     }
 
+    .flag {
+        display: block;
+        margin: 5px;
+        
+        //text-decoration: none;
 
+        .flagPoint, .flagFold {
+            display: none;
+        }
+
+        .flagButton{
+            border-radius: 5px;
+            display: block;
+            height: 50px;
+            padding: {
+                left: 10px;
+                right: 10px;
+            }
+        }
+        .flagText {
+            display: block;
+            position: relative;
+            width: 100%;
+        }
+    }
+
+    .flag:hover a {
+        text-decoration: underline;
+    }
 }
