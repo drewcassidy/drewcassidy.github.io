@@ -1,6 +1,25 @@
-<ul id="sidebar">
-    {% include flag.html color="blue" name="Home" url="/" %}
-    {% include flag.html color="green" name="Blog" url="/Blog" %}
-    {% include flag.html color="orange" name="Projects" url="/Projects" %}
-    {% include flag.html color="magenta" name="About" url="/About" %}
-</ul>
+<nav id="sidebar">
+    <ul id="navFlags">
+        <li>{% include flag.html color="blue" name="Home" url="/" %}</li>
+        <li>{% include flag.html color="green" name="Blog" url="/Blog" %}</li>
+        <li>{% include flag.html color="orange" name="Projects" url="/Projects" %}</li>
+        <li>{% include flag.html color="magenta" name="About" url="/About" %}</li>
+    </ul>
+    <ul id="navLinks" class="fa-ul">
+        <li>
+            <a href="https://github.com/drewcassidy">
+                <i class="fa fa-li fa-github" aria-hidden="true"></i>Github
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/AndrewNCassidy">
+                <i class="fa fa-li fa-twitter" aria-hidden="true"></i> Twitter
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/drewcassidy/drewcassidy.github.io">
+                <i class="fa fa-li fa-code" aria-hidden="true"></i> This Site
+            </a>
+        </li>
+    </ul>
+</nav>
