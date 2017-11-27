@@ -218,7 +218,6 @@ $animate-time: 0.03s;
 
 @media screen and (max-width: $mobile-width){
     #sidebar{
-        position: -webkit-sticky;
         display: flex;
         justify-content: space-between;
         top: 0;
@@ -229,12 +228,15 @@ $animate-time: 0.03s;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        padding: {
+            left: 15px;
+            right: 15px;
+        } 
 
         li {
-            padding: 5px;
             flex-grow: 1;
             flex-shrink: 0;
-            min-width: 100px;
+           width: 120px;
         }
         .flag {
             text-decoration: none;
@@ -242,8 +244,9 @@ $animate-time: 0.03s;
             display: block;
             flex-shrink: 0;
             flex-grow: 1;
-            width: 100%;
 
+
+            margin: 5px;
             .flagPoint, .flagFold {
                 display: none;
             }
@@ -252,7 +255,6 @@ $animate-time: 0.03s;
                 border-radius: 5px;
                 display: block;
                 height: 50px;
-                width: 100%;
 
                 .flagText {
                     display: block;
