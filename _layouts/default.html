@@ -3,19 +3,16 @@
 {% include head.html %}
 
 <body>
-    <div id="box">
-        {% include header.html %}
+    {% include header.html %}
 
-        <div id="main">
-            {% include sidebar.html %}
+    <main>
+        {% include sidebar.html %}
 
-            <div id="content">
-                {{ content }}
-            </div>
-        </div>
-
-        <!--{% include footer.html %}-->
-    </div>
+        <article id="content">
+            {{ content }}
+        </article>
+    </main>
+    <!--{% include footer.html %}-->
 </body>
 
 </html>

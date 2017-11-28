@@ -58,12 +58,12 @@
 }
 
 
-body {
+html{
     margin: 0;
     background-color: $margin;
 }
 
-#box {
+body {
     background-color: $background;
     max-width: 800px;
     z-index: 0;
@@ -115,7 +115,7 @@ header {
     }
 
 }
-#main {
+main {
     display: flex;
 }
 
@@ -173,7 +173,7 @@ header {
         }
     }
 
-    #main {
+    main {
         flex-direction: column;
     }
 }
