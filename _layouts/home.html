@@ -3,7 +3,11 @@
 {% include head.html %}
 
 <body>
-    {% include header.html %}
+    <header>
+        <a href="/" id="name"><b>Andrew Cassidy</b></a> 
+            <span class="slash">/</span>
+        {{ page.title }}
+    </header>
 
     <main>
         {% include sidebar.html %}
