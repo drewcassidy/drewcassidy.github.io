@@ -1,8 +1,13 @@
 permalink: pretty
 
 exclude:
- - "fa/src"
- - "fa/less"
+  - fa/src
+  - fa/scss
+  - fa/less
+  - fa/*.json
+  - fa/*.md
+  - fa/*.txt
+  - fa/Gem*
 
 collections:
- - projects
+  - projects
