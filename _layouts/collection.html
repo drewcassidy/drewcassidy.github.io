@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+
+<head>
+    {% include head.html %}
+    <link rel="stylesheet" href="/css/blog.css"/>
+</head>
 
 <body>
     <header>
-        <a href="/" id="name"><b>Andrew Cassidy</b></a> 
-            <span class="slash">/</span>
-        {{ page.title }}
-            <span class="slash">/</span>
+        <a href="/" id="name"><b>Andrew Cassidy</b></a>
+        <span class="slash">/</span> {{ page.title }}
+        <span class="slash">/</span>
     </header>
 
     <main>

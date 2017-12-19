@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+
+<head>
+    {% include head.html %}
+</head>
 
 <body>
     <header>
-        <a href="/" id="name"><b>Andrew Cassidy</b></a> 
-            <span class="slash">/</span>
+        <a href="/" id="name"><b>Andrew Cassidy</b></a>
+        <span class="slash">/</span>
         <a href="/Blog" class="dir">Blog</a>
-            <span class="slash">/</span>
-        {{ page.title }}
+        <span class="slash">/</span> {{ page.title }}
     </header>
 
     <main>

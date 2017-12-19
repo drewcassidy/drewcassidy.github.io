@@ -11,3 +11,5 @@ exclude:
 
 collections:
   - projects
+
+mobile-width: "600px"
