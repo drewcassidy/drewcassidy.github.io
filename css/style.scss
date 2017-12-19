@@ -103,16 +103,15 @@ header {
     }
 }
 
-main {
-    display: flex;
-}
-
 hr {
     border-width: 0;
     height: 1px;
-    background-color: $body-text-subtle;
+    background-color: $body-text;
 }
 
+#box {
+    display: flex;
+}
 
 #content {
     padding: {
@@ -158,7 +157,7 @@ hr {
             }
         }
     }
-    main {
+    #box {
         flex-direction: column;
     }
 }

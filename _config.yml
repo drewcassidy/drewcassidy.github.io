@@ -12,4 +12,12 @@ exclude:
 collections:
   - projects
 
+defaults:
+  -
+    scope:
+      paths: _posts
+    values:
+      layout: post
+
+
 mobile-width: "600px"

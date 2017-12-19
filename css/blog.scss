@@ -4,11 +4,6 @@
 @import 'colors';
 @import 'fonts';
 
-#post-list {
-    list-style-type: none;
-    padding: {
-        left: 0px;
-    }
 
     .post-entry {
         .post-title {
@@ -33,7 +28,6 @@
         }
 
         .post-see-more {
-            font-style: italic;
             color: $body-text-subtle;
         }
         .post-see-more:hover {
@@ -48,4 +42,3 @@
             margin: 5px;
         }
     }
-}

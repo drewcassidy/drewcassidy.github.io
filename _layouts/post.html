@@ -10,16 +10,17 @@
         <a href="/" id="name"><b>Andrew Cassidy</b></a>
         <span class="slash">/</span>
         <a href="/Blog" class="dir">Blog</a>
-        <span class="slash">/</span> {{ page.title }}
+        <span class="slash">/</span>
     </header>
 
-    <main>
+    <div id="box">
         {% include sidebar.html %}
 
-        <article id="content">
+        <main id="content">
+            <h1> {{page.title}} </h1>
             {{ content }}
-        </article>
-    </main>
+        </main>
+    </div>
     <!--{% include footer.html %}-->
 </body>
 
