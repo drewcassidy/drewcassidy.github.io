@@ -1,0 +1,21 @@
+<table class="post-info" style="width:100%">
+    <tr>
+        <td class="post-tags">
+            <small>
+                Tags:
+                {% if include.tags.size > 0 %}
+                    {% for tag in include.tags limit: 6%}
+                        <i>{{ tag }}</i>
+                    {% endfor %}
+                {% else %}
+                    none
+                {% endif %}
+            </small>
+        <td  class="post-date" style="text-align:right">
+            <small>
+                <i>{{ include.date | date: "%b %-d, %Y" }}</i>
+            </small>
+        </td>
+    </tr>
+</table>
+<hr>

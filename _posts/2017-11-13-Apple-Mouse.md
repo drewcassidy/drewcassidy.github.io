@@ -13,6 +13,8 @@ My idea was to transplant the internals from a cheap bluetooth mouse (one I have
 ## Day 1: The Mouse Buttons
 The first step was to split the existing single button into two. After grinding off the plastic welding on the pins holding the button in, I used a hacksaw guided by a block of wood to saw the button in half all the way down to the center part of the hinge. After sanding I think the cut looked pretty good! Something like a laser, or a better suited saw would probably have gotten a cleaner cut, but I was happy with this
 
+{% include figure-image.html src="img-2-small.jpg img-3-small.jpg img-4-small.jpg img-5-small.jpg" caption="the _mouse_ case" %}
+
 ## Day 2: The Board
 Since i wanted the optical sensor to peer through where the ball went, I needed it to be centered, but the bluetooth mouse’s board was slightly too wide to do this. Luckily the only thing on that part was the right mouse button, which I had to move anyways, and the connector for the batteries, which i was already replacing with a Lithium battery.
 I unfortunately had to scrape away some of the solder mask from the underside of the board to solder on a wire for the power connection, since all the plated holes were on the cutoff part (I couldn’t trace it to any of the pins on the sensor, I suspect there was some voltage conversioning happening). I also had to solder a piece of 30AWG wire directly to the surface mounted bluetooth module for right click, since that trace went all the way around the outside edge of the board.

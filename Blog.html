@@ -8,25 +8,15 @@ permalink: Blog/
 
 {% for post in site.posts %}
     <article class="post-entry">
-        <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            <a href="{{ post.url | prepend: site.baseurl }}">
                 {{ post.title }}
-        </a>
-        <table>
-            <tr>
-                <td class="post-tags">
-                    {% include taglist.html %}
-                <td  class="post-date">
-                    <i>{{ post.date | date: "%b %-d, %Y" }}</i>
-                </td>
-            </tr>
-        </table>
+            </a>
+        </h2>
 
-        <hr>
+        {% include post-info.html tags = post.tags date=post.date%}
 
         <div class="post-excerpt">
-            {% assign excerpt-text = post.content | markdownify %}
-            {% assign excerpt-length = excerpt-text | number_of_words %}
-
             {{post.content | markdownify| truncate: char-count}}
 
             <a class="post-see-more" href="{{ post.url | prepend: site.baseurl }}">
@@ -34,4 +24,5 @@ permalink: Blog/
             </a>
         </div>
     </article>
+    <br>
 {% endfor %}

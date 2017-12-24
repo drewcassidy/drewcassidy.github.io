@@ -1,0 +1,30 @@
+<figure
+    {% if include.float %}
+        style="float: {{include.float}};"
+    {% else %}
+        style="float: none; width:100%"
+    {% endif %}>
+
+{% assign srcs = include.src | split: ' ' %}
+{% capture path %}/images/{{page.path | split: '/' | last | split: '.' | first }}{% endcapture %}
+
+    <div class="figure-contents">
+{% for src in srcs %}
+    {% capture img %} {{path}}/{{src}} {% endcapture %}
+        <a href="{{ img | remove: "-small" }}"> <img
+            src="{{ img }}"
+        {% if include.caption %}
+            alt="{{ include.caption | markdownify | strip_html }}"
+        {% else %}
+            alt="{{ include.alt }}"
+        {% endif %}> </a>
+{% endfor %}
+    </div>
+
+{% if include.caption %}
+    <figcaption>
+        {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+    </figcaption>
+{% endif %}
+
+</figure>
