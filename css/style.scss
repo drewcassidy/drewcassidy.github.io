@@ -161,11 +161,10 @@ small {
 }
 
 .figure-gallery {
-    margin: 0;
 
     .gallery-grid {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: -60px;
+        margin-right: -60px;
         line-height: 0;
 
         display: flex;
@@ -180,18 +179,21 @@ small {
         }
 
         @media screen and (max-width: 500px) {
-            margin-left: -20px;
 
             img {
                 height: 160px
             }
         }
-
     }
 
     .gallery-solo {
         margin: 0;
         line-height: 0;
+
+        padding: {
+            left: 10%;
+            right: 10%;
+        }
 
         img {
             height: auto;
