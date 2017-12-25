@@ -1,25 +1,14 @@
-<figure
-    {% if include.float %}
-        style="float: {{include.float}};"
-    {% else %}
-        style="float: none; width:100%"
-    {% endif %}>
+{% if include.float %}
+<figure class="figure-float" style="float:{{ include.float }};">
+{% else %}
+<figure class="figure-image">
+{% endif %}
 
-{% assign srcs = include.src | split: ' ' %}
 {% capture path %}/images/{{page.path | split: '/' | last | split: '.' | first }}{% endcapture %}
+{% capture alt %}{{ include.caption | markdownify | strip_html }} {{ include.alt }}{% endcapture %}
 
-    <div class="figure-contents">
-{% for src in srcs %}
-    {% capture img %} {{path}}/{{src}} {% endcapture %}
-        <a href="{{ img | remove: "-small" }}"> <img
-            src="{{ img }}"
-        {% if include.caption %}
-            alt="{{ include.caption | markdownify | strip_html }}"
-        {% else %}
-            alt="{{ include.alt }}"
-        {% endif %}> </a>
-{% endfor %}
-    </div>
+{% capture src %}{{ path }}/{{ include.src }}{% endcapture %}
+{% include image.html src=src alt=alt %}
 
 {% if include.caption %}
     <figcaption>

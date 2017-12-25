@@ -142,6 +142,7 @@ p {
 }
 
 h1,h2,h3 {
+    clear: both;
     margin: {
         top: 0px;
         bottom: 10px;
@@ -159,37 +160,73 @@ small {
     font-size: 0.8em;
 }
 
-figure {
+.figure-gallery {
     margin: 0;
 
+    .gallery-grid {
+        margin-left: -20px;
+        margin-right: -20px;
+        line-height: 0;
 
-    .figure-contents {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+
+        img {
+            width: auto;
+            margin: 3px;
+            height: 220px;
+
+        }
+
+        @media screen and (max-width: 500px) {
+            margin-left: -20px;
+
+            img {
+                height: 160px
+            }
+        }
+
     }
 
-    a {
-        padding: 3px;
+    .gallery-solo {
         margin: 0;
-        height: 100%;
-        width: auto;
-        flex-basis: auto;
-        flex-shrink: 1;
+        line-height: 0;
 
-    }
-
-    img {
-        margin: auto;
-        max-height: 240px;
-        min-height: 100px;
-    }
-
-    figcaption {
-        text-align: center;
-
+        img {
+            height: auto;
+            width: 100%;
+            margin: 3px auto;
+        }
     }
 }
+
+.figure-image {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.figure-float {
+    width: 50%;
+    margin: 10px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+figcaption {
+    text-align: center;
+
+}
+
 
 
 // narrow screens override

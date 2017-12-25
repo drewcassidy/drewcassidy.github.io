@@ -1,0 +1,29 @@
+<figure class="figure-gallery">
+
+{% assign rows = include.src | split: ':' %}
+{% capture path %}/images/{{page.path | split: '/' | last | split: '.' | first }}{% endcapture %}
+{% capture alt %}{{ include.caption | markdownify | strip_html }} {{ include.alt }}{% endcapture %}
+
+{% for row in rows %}
+    {% assign imgs = row | split: ' ' %}
+
+    {% if imgs.size == 1 %}
+        <div class="gallery-solo">
+    {% else %}
+        <div class="gallery-grid">
+    {% endif %}
+
+    {% for img in imgs %}
+            {% capture src %}{{ path }}/{{ img }}{% endcapture %}
+            {% include image.html src=src alt=alt %}
+    {% endfor %}
+        </div>
+{% endfor %}
+
+{% if include.caption %}
+    <figcaption>
+        {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+    </figcaption>
+{% endif %}
+
+</figure>
