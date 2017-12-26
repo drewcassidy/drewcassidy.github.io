@@ -1,5 +1,6 @@
 ---
 title: Hacking a 1986 computer mouse into the 21st century
+tags: electronics Apple Bluetooth retrotech foo bar biz baz zap
 ---
 {% include figure-image.html
     src="atkinson.png"
@@ -19,14 +20,14 @@ The first step was to split the existing single button into two. After grinding 
 
 {% include figure-gallery.html
     src="img-2-small.jpg img-3-small.jpg img-4-small.jpg img-5-small.jpg"
-    caption="the mouse case" %}
+    caption="The mouse case" %}
 
 ## Day 2: The Board
 
 {% include figure-image.html
     src="img-6-small.jpg"
     float="right"
-    caption="The Board needed to be cut down" %}
+    caption="The board needed to be cut down" %}
 
 {% include figure-image.html
     src="img-11-small.jpg"
