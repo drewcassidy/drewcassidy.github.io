@@ -1,6 +1,6 @@
 ---
 title: Hacking a 1986 computer mouse into the 21st century
-tags: electronics Apple Bluetooth retrotech foo bar biz baz zap
+tags: electronics Apple Bluetooth retrotech
 ---
 {% include figure-image.html
     src="atkinson.png"
