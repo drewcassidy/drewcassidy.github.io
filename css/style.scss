@@ -71,6 +71,7 @@ body {
     color: $body-text;
 
     max-width: 1000px;
+    
     z-index: 0;
     margin-left: auto;
     margin-right: auto;
@@ -213,8 +214,6 @@ small {
         width: 100%;
         height: auto;
     }
-
-
 }
 
 .figure-float {
@@ -226,8 +225,8 @@ small {
         width: 100%;
         height: auto;
     }
-
 }
+
 @media screen and (max-width: 500px) {
 
     .figure-float {
