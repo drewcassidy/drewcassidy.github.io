@@ -19,7 +19,7 @@ My idea was to transplant the internals from a cheap bluetooth mouse (one I have
 The first step was to split the existing single button into two. After grinding off the plastic welding on the pins holding the button in, I used a hacksaw guided by a block of wood to saw the button in half all the way down to the center part of the hinge. After sanding I think the cut looked pretty good! Something like a laser, or a better suited saw would probably have gotten a cleaner cut, but I was happy with this
 
 {% include figure-gallery.html
-    src="img-2-small.jpg img-3-small.jpg img-4-small.jpg img-5-small.jpg"
+    src="img-2-small.jpg img-3-small.jpg : img-4-small.jpg img-5-small.jpg"
     caption="The mouse case" %}
 
 ## Day 2: The Board
