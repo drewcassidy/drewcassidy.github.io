@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Time-Zones and ntpd in Raspbian
+=======
+title: Raspbian Time-Zones and ntpd
+>>>>>>> e5b1b2f7cd7f430fc8e4fed10279a64fe0703a20
 tags: Raspberry-pi linux
 ---
 Setting the time zone in raspbian using `raspi-config` has strange results
