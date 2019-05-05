@@ -20,11 +20,10 @@
         {{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}
     {% endcapture %}
 
+    <title>{{title}}</title>
 
     <meta charset=utf-8 />
-    <title> {% if page.title %} {{ page.title }} | {% endif %} Andrew Cassidy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 
     <!-- Twitter cards -->
     <meta name="twitter:card" content="summary"/>
