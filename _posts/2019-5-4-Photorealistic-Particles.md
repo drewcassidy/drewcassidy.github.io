@@ -37,3 +37,10 @@ Possible future additions to this technique:
 - use more photos for a more smooth animation
 - rendering a spinning 3D model in blender instead of using photography
 
+The source file is licensed under CC-BY-SA-4.0 and available [here](https://github.com/drewcassidy/ReStocked-Assets/raw/master/Textures/fx/restock-particle-rocks.psd).
+
+---
+
+## UPDATE
+
+After writing this I discovered that the "UV Cycles" value I used to control how many times the flipbook animation playes over the life of the particle is not properly supported in-game due to a bug. I've opened a bug report [here](https://bugs.kerbalspaceprogram.com/issues/22109), but there is also a workaround using the "tiling" property of the material. I have a texture atlas of 4x2 images that I want to loop 5 times, so I set the tiling on the y axis of the texture to 5, and set the number of tiles in the particle to 4x10, effectively making the texture 5 times larger in uv-space. The flipbook is still only running once, its just running on a tiling texture.
