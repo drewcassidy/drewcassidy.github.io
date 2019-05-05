@@ -1,5 +1,5 @@
 ---
-title: Making Realistic Particle Effects From Photographs
+title: Making Realistic Particle Effects From Photos
 tags: KSP restock gamedev 
 ---
 While working on drills for ReStock I realized I needed some particle effects for when the drills are in use. I wanted the effect of small rocks being kicked up from the ground and falling back down, but my attempts at a texture for the rocks all ended up looking more like potatos. 
