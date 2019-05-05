@@ -15,8 +15,10 @@
             {{page.content | markdownify | strip_html | truncate: 100}}
         {% endif %}
     {% endcapture %} 
-        {{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}
+
     {% capture image %}
+        {{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}
+    {% endcapture %}
 
 
     <meta charset=utf-8 />
