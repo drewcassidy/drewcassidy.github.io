@@ -12,6 +12,18 @@
             content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}"/>
     {% endif %}
 
+    {% if page.description %}
+            <meta 
+                property="og:description"
+                content="{{page.description}}"
+            />
+        {% else %}
+            <meta 
+                property="og:description"
+                content="{{page.content | markdownify | strip_html | truncate: 100}}"
+            />
+    {% endif %}
+
     {% if page.collection == "posts" %}
         <meta property="og:type" 
             content="article"/>
@@ -24,18 +36,6 @@
             <meta property="article:tag" content="{{ tag }}"/>
         {% endfor %}
 
-
-        {% if page.description %}
-            <meta 
-                property="og:description"
-                content="{{page.description}}"
-            />
-        {% else %}
-            <meta 
-                property="og:description"
-                content="{{page.content | markdownify | strip_html | truncate: 100}}"
-            />
-        {% endif %}
     {% else %}
         <meta property="og:type" 
             content="website"/>
