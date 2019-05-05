@@ -7,6 +7,11 @@
         content="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}"/>
      <meta property="og:url" content="{{site.url}}{{page.url}}"/>
 
+     {% if page.image %}
+        <meta property="og:image" 
+            content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}"/>
+    {% endif %}
+
     {% if page.collection == "posts" %}
         <meta property="og:type" 
             content="article"/>
@@ -19,10 +24,6 @@
             <meta property="article:tag" content="{{ tag }}"/>
         {% endfor %}
 
-        {% if page.image %}
-            <meta property="og:image" 
-                content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}"/>
-        {% endif %}
 
         {% if page.description %}
             <meta 
