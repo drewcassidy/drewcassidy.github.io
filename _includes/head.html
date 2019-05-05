@@ -17,6 +17,10 @@
         {% for tag in page.tags %}
             <meta name="og:article:tag" contents="{{ tag }}">
         {% endfor %}
+        {% if page.image %}
+            <meta name="og:image" 
+                contents="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}">
+        {% endif %}
     {% else %}
         <meta name="og:type" 
             contents="website">
