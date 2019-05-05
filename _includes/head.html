@@ -29,16 +29,13 @@
 <meta name="twitter:title" content="{{title}}"/>
 <meta name="twitter:description" content="{{description}}"/>
 
-{% if page.image %}
-    <meta name="twitter:image" content="{{image}}"/>
-{% endif %}
-
 <!-- Opengraph -->
 <meta property="og:url" content="{{site.url}}{{page.url}}"/>
 <meta property="og:title" content="{{title}}"/>
-<meta property="og:image" content="{{description}}"/>
+<meta property="og:description" content="{{description}}"/>
 
 {% if page.image %}
+    <meta name="twitter:image" content="{{image}}"/>
     <meta property="og:image" content="{{image}}"/>
 {% endif %}
 

@@ -7,19 +7,24 @@
 </head>
 
 <body>
-    <header>
-        <a href="/" id="name"><b>Andrew Cassidy</b></a>
-        <span class="slash">/</span> {{ page.title }}
-    </header>
+    <div id="page">
+        <header>
+            <a href="/" id="name"><b>Andrew Cassidy</b></a>
+            <span class="slash">/</span> {{ page.title }}
+        </header>
 
-    <div id="box">
-        {% include sidebar.html %}
+        <div id="box">
+            {% include sidebar.html %}
 
-        <main id="content">
-            {{ content }}
-        </main>
+            <main id="content">
+                {{ content }}
+            </main>
+        </div>
     </div>
-    <!--{% include footer.html %}-->
+
+    <footer>
+        {% include footer.html %}
+    </footer>
 </body>
 
 </html>

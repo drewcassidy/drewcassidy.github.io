@@ -65,17 +65,25 @@ html {
 }
 
 body {
-    background-color: $background;
+    margin-left: auto;
+    margin-right: auto;
     font-size: $body-size;
     font-family: $body-font;
     color: $body-text;
-
     max-width: 1000px;
-    
+
+}
+
+#page {
+    background-color: $background;
+    border-radius: 5px;
+
+
     z-index: 0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+    margin-bottom: 10px;
     height: 100%;
     @media screen and (min-width: $mobile-width) {
         box-shadow: 0 0 4px 5px $shadow;
@@ -110,6 +118,41 @@ header {
 }
 
 
+footer {
+    color: $sidebar-link-text;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 0.8em;
+    font-family: $sidebar-font;
+
+    a {
+        color: $sidebar-link-text;
+    }
+    a:hover {
+        color: $sidebar-link-hover;
+    }
+
+    #cc {
+        text-decoration: none;
+        flex-shrink: 0;
+        display: inline-block;
+        margin: 5px;
+        fill:currentColor;
+    }
+
+    #licensing {
+        margin: 5px;
+        width: 300px;
+        display: inline-block;
+    }
+}
+
+
 #box {
     display: flex;
 }
@@ -118,6 +161,7 @@ header {
     padding: {
         right: 20px;
         left: 20px;
+        bottom: 20px;
     }
     flex-grow: 1;
 }
@@ -254,8 +298,6 @@ figcaption {
 
 }
 
-
-
 // narrow screens override
 @media screen and (max-width: $mobile-width) {
     header {
@@ -288,9 +330,4 @@ figcaption {
     #box {
         flex-direction: column;
     }
-}
-
-footer {
-    font-size: 1em;
-    text-align: center;
 }
