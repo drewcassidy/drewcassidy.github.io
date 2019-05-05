@@ -3,6 +3,26 @@
     <title> {% if page.title %} {{ page.title }} | {% endif %} Andrew Cassidy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="og:title" 
+        contents="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}">
+     <meta name="og:url" contents="{{site.url}}{{page.url}}">
+
+    {% if page.collection == "posts" %}
+        <meta name="og:type" 
+            contents="article">
+        <meta name="og:article:published_time" 
+            contents="{{ page.date | date_to_xmlschema }}">
+        <meta name="og:article:section"
+            contents="Blog">
+        {% for tag in page.tags %}
+            <meta name="og:article:tag" contents="{{ tag }}">
+        {% endfor %}
+    {% else %}
+        <meta name="og:type" 
+            contents="website">
+    {% endif %}
+    <!--{{page.collection}}-->
+
     <link rel="stylesheet" href="/fa/css/fontawesome.min.css">
     <link rel="stylesheet" href="/fa/css/brands.min.css">
     <link rel="stylesheet" href="/fa/css/solid.min.css">

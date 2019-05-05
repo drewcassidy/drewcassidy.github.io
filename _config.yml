@@ -1,5 +1,7 @@
 permalink: pretty
 
+url: http://drewcassidy.me
+
 exclude:
   - fa/src
   - fa/scss
