@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 
-{% include head.html %}
+<head>
+    {% include head.html %}
+    <meta property="og:type" 
+        content="article"/>
+    <meta property="article:published_time" 
+        content="{{ page.date | date_to_xmlschema }}"/>
+    <meta property="article:section"
+        content="Blog"/>
+
+    {% for tag in page.tags %}
+        <meta property="article:tag" content="{{ tag }}"/>
+    {% endfor %}
+</head>
 
 <body>
     <header>
