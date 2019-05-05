@@ -11,7 +11,7 @@ While working on drills for ReStock I realized I needed some particle effects fo
   src="potato-rock.png"
   caption="A lumpy excuse for a rock" %}
 
-Here on earth, we have plenty of potato-shaped rocks due to erosion in water and wind, but in space theres no such forces to smooth out rocks, and they end up looking far more jagged, and dangerously so. Even small particles of lunar dust is razor sharp when viewed under a microscope.
+Here on earth, we have plenty of potato-shaped rocks due to erosion in water and wind, but in space theres no such forces to smooth out rocks, and they end up looking far more jagged, and dangerously so. Even small particles of lunar dust are razor sharp when viewed under a microscope.
 
 Instead of hand-painting a realistic chunk of slag in photoshop I thought I would try creating it using photographs. Rocks are easy to come by, after all, so I grabbed a chunk of what I believe to be granite from outside. Photographing a real sample also has the benefit of allowing for easy flipbook animation of the particles, which KSP’s limitied particle system format luckly supports.
 
