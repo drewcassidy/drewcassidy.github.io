@@ -4,39 +4,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:title" 
-        content="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}">
-     <meta property="og:url" content="{{site.url}}{{page.url}}">
+        content="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}"/>
+     <meta property="og:url" content="{{site.url}}{{page.url}}"/>
 
      {% if page.image %}
         <meta property="og:image" 
-            content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}">
+            content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}"/>
     {% endif %}
 
     {% if page.description %}
             <meta 
                 property="og:description"
-                content="{{page.description}}">
+                content="{{page.description}}"
+            />
         {% else %}
             <meta 
                 property="og:description"
-                content="{{page.content | markdownify | strip_html | truncate: 100}}">
+                content="{{page.content | markdownify | strip_html | truncate: 100}}"
+            />
     {% endif %}
 
     {% if page.collection == "posts" %}
         <meta property="og:type" 
-            content="article">
+            content="article"/>
         <meta property="article:published_time" 
-            content="{{ page.date | date_to_xmlschema }}">
+            content="{{ page.date | date_to_xmlschema }}"/>
         <meta property="article:section"
-            content="Blog">
+            content="Blog"/>
 
         {% for tag in page.tags %}
-            <meta property="article:tag" content="{{ tag }}">
+            <meta property="article:tag" content="{{ tag }}"/>
         {% endfor %}
 
     {% else %}
         <meta property="og:type" 
-            content="website">
+            content="website"/>
     {% endif %}
 
     <link rel="stylesheet" href="/fa/css/fontawesome.min.css">
