@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Licence
+title: License
 ---
 
 ## creative commons
