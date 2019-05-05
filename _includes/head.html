@@ -4,26 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="og:title" 
-        contents="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}">
-     <meta name="og:url" contents="{{site.url}}{{page.url}}">
+        content="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}">
+     <meta name="og:url" content="{{site.url}}{{page.url}}">
 
     {% if page.collection == "posts" %}
         <meta name="og:type" 
-            contents="article">
+            content="article">
         <meta name="og:article:published_time" 
-            contents="{{ page.date | date_to_xmlschema }}">
+            content="{{ page.date | date_to_xmlschema }}">
         <meta name="og:article:section"
-            contents="Blog">
+            content="Blog">
         {% for tag in page.tags %}
-            <meta name="og:article:tag" contents="{{ tag }}">
+            <meta name="og:article:tag" content="{{ tag }}">
         {% endfor %}
         {% if page.image %}
             <meta name="og:image" 
-                contents="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}">
+                content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}">
         {% endif %}
     {% else %}
         <meta name="og:type" 
-            contents="website">
+            content="website">
     {% endif %}
     <!--{{page.collection}}-->
 
