@@ -1,0 +1,19 @@
+{% if include.float %}
+<figure class="figure-float" style="float:{{ include.float }};">
+{% else %}
+<figure class="figure-video">
+{% endif %}
+
+{% capture path %}/images/{{page.path | split: '/' | last | split: '.' | first }}{% endcapture %}
+
+{% capture src %}{{ path }}/{{ include.src }}{% endcapture %}
+{% capture type %}{{ include.src | split: "." | last }}{% endcapture %}
+{% include video.html src=src type=type %}
+
+{% if include.caption %}
+    <figcaption>
+        {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+    </figcaption>
+{% endif %}
+
+</figure>
