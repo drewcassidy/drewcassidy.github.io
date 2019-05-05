@@ -8,8 +8,6 @@ $mobile-width: {{ site.mobile-width }};
 
 .blue {
     fill: $blue;
-    SYNTAX ERROR
-
     background-color: $blue;
 }
 
@@ -67,7 +65,7 @@ html {
 }
 
 body {
-    background-color: $magenta;
+    background-color: $background;
     font-size: $body-size;
     font-family: $body-font;
     color: $body-text;
