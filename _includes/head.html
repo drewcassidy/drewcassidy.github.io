@@ -1,27 +1,46 @@
 <head>
+
+    {% capture title %}
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            Andrew Cassidy
+        {% endif %}
+    {% endcapture %} 
+
+    {% capture description %}
+        {% if page.description%}
+            {{ page.description}}
+        {% else %}
+            {{page.content | markdownify | strip_html | truncate: 100}}
+        {% endif %}
+    {% endcapture %} 
+        {{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}
+    {% capture image %}
+
+
     <meta charset=utf-8 />
     <title> {% if page.title %} {{ page.title }} | {% endif %} Andrew Cassidy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" 
-        content="{% if page.title %} {{ page.title }} {% else %} Andrew Cassidy's Website {% endif %}"/>
-     <meta property="og:url" content="{{site.url}}{{page.url}}"/>
 
-     {% if page.image %}
-        <meta property="og:image" 
-            content="{{site.url}}/images/{{page.path | split: '/' | last | split: '.' | first }}/{{page.image}}"/>
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" conten="@AndrewNCassidy"/>
+    <meta name="twitter:title" content="{{title}}"/>
+    <meta name="twitter:description" content="{{description}}"/>
+
+    {% if page.image %}
+        <meta name="twitter:image" content="{{image}}"/>
     {% endif %}
 
-    {% if page.description %}
-            <meta 
-                property="og:description"
-                content="{{page.description}}"
-            />
-        {% else %}
-            <meta 
-                property="og:description"
-                content="{{page.content | markdownify | strip_html | truncate: 100}}"
-            />
+    <!-- Opengraph -->
+    <meta property="og:url" content="{{site.url}}{{page.url}}"/>
+    <meta property="og:title" content="{{title}}"/>
+    <meta property="og:image" content="{{description}}"/>
+
+    {% if page.image %}
+        <meta property="og:image" content="{{image}}"/>
     {% endif %}
 
     {% if page.collection == "posts" %}
