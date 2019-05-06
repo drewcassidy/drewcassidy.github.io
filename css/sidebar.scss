@@ -34,12 +34,18 @@ $mobile-width: {{ site.mobile-width }};
 
 #navLinks {
     display: block;
-    padding: {
-        left: 10px;
-    }
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0;
     color: $subtle;
     font-family: $sidebar-font;
+
+    li {
+        position: relative;
+    }
+
     a {
+        vertical-align: 10%;
         color: $sidebar-link-text;
         text-decoration: none;
         @include prefix-group(( transition-duration: $animate-time, transition-property: color, ), webkit moz o);
@@ -48,6 +54,14 @@ $mobile-width: {{ site.mobile-width }};
         color: $sidebar-link-hover;
         text-decoration: underline;
     }
+
+    svg {
+        left: -2em;
+        position: absolute;
+        text-align: center;
+        width: 2em;
+    }
+
 }
 
 .flagButton,
