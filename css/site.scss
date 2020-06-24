@@ -70,7 +70,7 @@ body {
     font-size: $body-size;
     font-family: $body-font;
     color: $body-text;
-    max-width: 1000px;
+    max-width: 1312px;
 
 }
 
@@ -167,6 +167,7 @@ footer {
         bottom: 20px;
     }
     flex-grow: 1;
+    overflow:hidden;
 }
 
 hr {

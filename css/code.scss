@@ -1,0 +1,94 @@
+---
+---
+@import 'util';
+@import 'colors';
+
+code {
+    background-color: darken($background, 2%);
+}
+
+// block code
+figure.highlight {
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    code {
+        display: block;
+        overflow-y: scroll;
+        background-color: darken($background, 2%);
+        padding: 10px 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px; 
+    }
+
+    td.gutter {
+        color: $subtle;
+        text-align: right;
+        padding-right: 0.5ch;
+        border-right: solid;
+        border-right-width: 1px;
+        border-right-color: $subtle
+    }
+
+    td.code {
+        padding-left: 0.5ch;
+    }
+}
+
+div.highlight {
+
+}
+
+
+
+// pre {
+//     display: inline;
+//     margin: 0;
+// }
+
+.k, .kw, .kd, .kn, .kp, .kr, .kt {
+    color: $blue
+}
+
+.n, .nx{
+    color: $orange
+}
+
+.nb, .np {
+    color: $blue
+}
+
+.nc, .no, .nl, {
+    color: $orange
+}
+
+.nd {
+    color: $orange;
+    font-weight: bold;
+}
+
+.nf {
+    color: $green;
+}
+
+.l, .ld, .s, .m {
+    color: $green;
+}
+
+.c, .cm, .cp, .c1, .cs {
+    color: $subtle;
+}
+
+.o {
+    color: $blue;
+}
