@@ -22,8 +22,7 @@ Instead of giving up, I decided to write my own decal projection code. How hard 
 
 Decal projection math is fairly straightforwards, and works exactly the same as how lighting works in forwards rendering paths. Lighting in a forwards rendering path, at least in Unity, is done by re-rendering the mesh once for every pixel light (after the initial directional light). 
 
-Decal projection works in exactly the same way. Each mesh gets rendered an additional time with a new shader and a matrix converting from vertex-space to the local space of the projector. The x and y coordinates in this space become the uv coordinates of the texture, and the z coordinate is the depth. The generation of this matrix is fairly straightforwards with a little matrix multiplication:
-
+Decal projection works in exactly the same way. Each mesh gets rendered an additional time with a new shader and a matrix converting from vertex-space to the local space of the projector. The x and y coordinates in this space become the uv coordinates of the texture, and the z coordinate is the depth. The actual rendering is done either by adding the decal material to an additional slot on the mesh renderer component you want to project onto, or by using `Graphics.DrawMesh`. The generation of this matrix is fairly straightforwards with a little matrix multiplication:
 
 {% highlight csharp linenos %}
 var projectionMatrix = transform.worldToLocalMatrix * targetRenderer.localToWorldMatrix;
@@ -44,6 +43,7 @@ var decalNormal = projectorToTarget.MultiplyVector(Vector3.back).normalized;
 targetMaterial.SetMatrix("_ProjectionMatrix", _projectionMatrix);
 targetMaterial.SetVector("_DecalNormal", decalNormal);
 {% endhighlight %}
+
 
 now in the shader you can use this matrix with the vertex position to find its location in projector-space.
 
