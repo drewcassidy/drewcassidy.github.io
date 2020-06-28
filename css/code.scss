@@ -18,6 +18,7 @@ figure.highlight {
     pre {
         margin-top: 0;
         margin-bottom: 0;
+        font-size: 0.9em;
     }
 
     code {
@@ -44,17 +45,6 @@ figure.highlight {
         padding-left: 0.5ch;
     }
 }
-
-div.highlight {
-
-}
-
-
-
-// pre {
-//     display: inline;
-//     margin: 0;
-// }
 
 .k, .kw, .kd, .kn, .kp, .kr, .kt {
     color: $blue
