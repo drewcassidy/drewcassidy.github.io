@@ -14,11 +14,11 @@ figure.highlight {
     margin-inline-end: 0;
     margin-block-start: 0;
     margin-block-end: 0;
+    font-size: 0.9em;
 
     pre {
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 0.9em;
     }
 
     code {
@@ -38,11 +38,13 @@ figure.highlight {
         padding-right: 0.5ch;
         border-right: solid;
         border-right-width: 1px;
-        border-right-color: $subtle
+        border-right-color: $subtle;
+        font-size: 1em;
     }
 
     td.code {
         padding-left: 0.5ch;
+        font-size: 1em;
     }
 }
 
