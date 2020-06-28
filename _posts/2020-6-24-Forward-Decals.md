@@ -144,7 +144,7 @@ var decalTangent = projectorToTarget.MultiplyVector(Vector3.right).normalized;
 
 targetMaterial.SetMatrix("_ProjectionMatrix", _projectionMatrix);
 targetMaterial.SetVector("_DecalNormal", decalNormal);
-targetMaterial.SetVector("_DecalTangent", decalNormal);
+targetMaterial.SetVector("_DecalTangent", decalTangent);
 {% endhighlight %}
 
 
