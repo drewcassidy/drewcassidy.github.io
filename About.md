@@ -11,5 +11,4 @@ My resumé can be found [here](/Resume/).
 ## Contact
 
 * [Mastodon](https://cybre.space/@cinebox)
-* [Twitter](https://twitter.com/andrewncassidy)
-* [github](https://github.com/drewcassidy)
+* [Github](https://github.com/drewcassidy)
