@@ -16,10 +16,12 @@ title: Resumé
 
 ## Job Experience
 
-#### Intern, FABcamp UC Irvine (Summers 2014-2016)
+#### Intern at FABcamp UC Irvine (Summers 2014-2016)
 
 * I designed a Simon game project for a UCI summer camp for middle-school students. It made use of a Raspberry Pi and Scratch, as well as a custom PCB and a 3D Printed enclosure.
 * Project files can be found [here](https://github.com/FABcamp/SimonGPIO2.0).
+
+#### Electrical Engineer at Digital Dynamics, Inc (2021-Now)
 
 ## Skills
 
