@@ -4,11 +4,11 @@ title: About
 ---
 # About Me
 
-I am a maker, programmer, and hacker living in Southern California. I'm recently graduated from the University of California, Irvine, with a degree in Electrical Engineering. 
+I am a maker, programmer, and hacker living in Northern California.
 
 My resumé can be found [here](/Resume/).
 
 ## Contact
 
-* [Mastodon](https://cybre.space/@cinebox)
+* [Mastodon](https://hackers.town/@cinebox)
 * [Github](https://github.com/drewcassidy)
